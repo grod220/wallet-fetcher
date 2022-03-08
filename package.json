@@ -1,0 +1,35 @@
+{
+  "name": "argent-screener",
+  "version": "0.0.1",
+  "private": true,
+  "author": "Gabe",
+  "license": "MIT",
+  "scripts": {
+    "dev": "next",
+    "build": "yarn lint && next build",
+    "type-check": "tsc",
+    "lint": "yarn format-check && next lint --fix",
+    "format": "prettier --ignore-path .gitignore --write .",
+    "format-check": "prettier --ignore-path .gitignore --check ."
+  },
+  "dependencies": {
+    "dotenv": "^16.0.0",
+    "ethers": "^5.5.4",
+    "next": "12.1.0",
+    "react": "17.0.2",
+    "react-dom": "17.0.2",
+    "react-query": "^3.34.16",
+    "recoil": "^0.6.1",
+    "styled-components": "^5.3.3"
+  },
+  "devDependencies": {
+    "@types/node": "17.0.21",
+    "@types/react": "17.0.39",
+    "@types/react-dom": "17.0.13",
+    "@types/styled-components": "^5.1.24",
+    "eslint": "8.10.0",
+    "eslint-config-next": "12.1.0",
+    "prettier": "2.5.1",
+    "typescript": "4.6.2"
+  }
+}
