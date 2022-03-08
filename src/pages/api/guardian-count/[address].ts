@@ -8,7 +8,7 @@ const getGuardianCount = async (address: string) => {
   return guardianCount.toNumber();
 };
 
-export default async ({ query: { address } }: NextApiRequest, res: NextApiResponse) => {
+const guardianCountRoute = async ({ query: { address } }: NextApiRequest, res: NextApiResponse) => {
   try {
     if (typeof address !== 'string') {
       throw new Error('incorrect parameter');
@@ -19,3 +19,5 @@ export default async ({ query: { address } }: NextApiRequest, res: NextApiRespon
     res.status(500).send(`Exception: ${e}`);
   }
 };
+
+export default guardianCountRoute;

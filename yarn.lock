@@ -2382,6 +2382,11 @@ supports-preserve-symlinks-flag@^1.0.0:
   resolved "https://registry.yarnpkg.com/supports-preserve-symlinks-flag/-/supports-preserve-symlinks-flag-1.0.0.tgz#6eda4bd344a3c94aea376d4cc31bc77311039e09"
   integrity sha512-ot0WnXS9fgdkgIcePe6RHNk1WA8+muPa6cSjeR3V8K27q9BB1rTE3R1p7Hv0z1ZyAc8s6Vvv8DIyWf681MAt0w==
 
+text-spinners@^1.0.5:
+  version "1.0.5"
+  resolved "https://registry.yarnpkg.com/text-spinners/-/text-spinners-1.0.5.tgz#801825e0643c53ff3ab3d990e1e93ddef97cb805"
+  integrity sha1-gBgl4GQ8U/86s9mQ4ek93vl8uAU=
+
 text-table@^0.2.0:
   version "0.2.0"
   resolved "https://registry.yarnpkg.com/text-table/-/text-table-0.2.0.tgz#7f5ee823ae805207c00af2df4a84ec3fcfa570b4"

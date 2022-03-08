@@ -18,16 +18,20 @@ export const TokenBalances: FC = () => {
 
   return (
     <div>
-      <div>Token balances:</div>
-      {data?.map((token, i) => {
-        return (
-          <div key={i}>
-            <div>{token.symbol}</div>
-            <div>{token.amount}</div>
-            <div>{token.price * token.amount}</div>
-          </div>
-        );
-      })}
+      <div>
+        <b>Token Balances:</b> {isLoading ? <span className="loading line" /> : error ? '❌' : null}
+      </div>
+      {data &&
+        data.map((token, i) => {
+          return (
+            <div key={i}>
+              <div>
+                <b>{token.symbol}</b> - {token.amount.toFixed(5)} - $
+                {(token.price * token.amount).toFixed(2)}
+              </div>
+            </div>
+          );
+        })}
     </div>
   );
 };

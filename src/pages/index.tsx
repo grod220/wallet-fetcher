@@ -7,8 +7,21 @@ import { AddressInput } from '../components/AddressInput';
 import { EthBalance } from '../components/EthBalance';
 import { GuardianCount } from '../components/GuardianCount';
 import { TokenBalances } from '../components/TokenBalances';
+import styled from 'styled-components';
 
-const queryClient = new QueryClient();
+const queryClient = new QueryClient({
+  defaultOptions: {
+    queries: {
+      retry: false,
+    },
+  },
+});
+
+const Container = styled.div`
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+`;
 
 const Index: FC = () => {
   return (
@@ -18,10 +31,12 @@ const Index: FC = () => {
       </Head>
       <QueryClientProvider client={queryClient}>
         <RecoilRoot>
-          <AddressInput />
-          <EthBalance />
-          <GuardianCount />
-          <TokenBalances />
+          <Container>
+            <AddressInput />
+            <EthBalance />
+            <GuardianCount />
+            <TokenBalances />
+          </Container>
         </RecoilRoot>
       </QueryClientProvider>
     </div>

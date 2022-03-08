@@ -42,7 +42,7 @@ const getTokenBalances = async (address: string) => {
   return data.map<TokenBalance>(({ amount, symbol, price }) => ({ amount, symbol, price }));
 };
 
-export default async ({ query: { address } }: NextApiRequest, res: NextApiResponse) => {
+const tokenBalancesRoute = async ({ query: { address } }: NextApiRequest, res: NextApiResponse) => {
   try {
     if (typeof address !== 'string') {
       throw new Error('incorrect parameter');
@@ -53,3 +53,5 @@ export default async ({ query: { address } }: NextApiRequest, res: NextApiRespon
     res.status(500).send(`Exception: ${e}`);
   }
 };
+
+export default tokenBalancesRoute;

@@ -15,5 +15,9 @@ export const EthBalance: FC = () => {
     },
   );
 
-  return <div>EthBalance: {data}</div>;
+  return (
+    <div>
+      <b>EthBalance:</b> {isLoading ? <span className="loading line" /> : error ? '❌' : data}
+    </div>
+  );
 };

@@ -14,5 +14,9 @@ export const GuardianCount: FC = () => {
       enabled: Boolean(submittedAddress),
     },
   );
-  return <div>GuardianCount: {data}</div>;
+  return (
+    <div>
+      <b>Guardian Count:</b> {isLoading ? <span className="loading line" /> : error ? '❌' : data}
+    </div>
+  );
 };
